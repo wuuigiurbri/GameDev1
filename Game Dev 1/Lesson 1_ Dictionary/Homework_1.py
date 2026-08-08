@@ -1,0 +1,16 @@
+scores  ={}
+scores ['Math'] = int(input("What is your math score? "))
+scores ['Science'] = int(input("What is your science score? "))
+scores ['English'] = int(input("What is your english score? "))
+scores ['French'] = int(input("What is your french score? "))
+scores ['History'] = int(input("What is your history score? "))
+scores ['Geography'] = int(input("What is your geography score? "))
+print(scores)
+average= sum(scores.values())/len(scores.keys())
+highv=  max(scores.values())
+highk= max(scores, key= scores.get)
+lowv= min(scores.values())
+lowk= min(scores, key=scores.get)
+
+print ("Your average was {}". format (average))
+print ("Your highest grade was {} in {} while your lowest grade was {} in {}".format (highv, highk, lowv, lowk))
