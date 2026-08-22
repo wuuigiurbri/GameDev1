@@ -1,0 +1,56 @@
+#Allaboutme= [[ThingsIlike= "apples"] [ThingsIdislike== "oranges"]]
+
+#print (Allaboutme)
+
+Samplelist= [[1,2,3],
+             [4,5,6],
+             [7,8,9]]
+
+print(Samplelist)
+
+print( type(Samplelist))
+
+print( len (Samplelist))
+
+print( Samplelist [1][1])
+
+Samplelist [1][1]= 55
+
+print(Samplelist)
+
+print(Samplelist [1])
+
+Samplelist.append([10,11,12])
+
+print(Samplelist)
+
+Samplelist[0].append(5)
+
+print (Samplelist)
+
+Samplelist.insert(1,[100,200,300,])
+
+print (Samplelist)
+Samplelist[0].remove (5)
+print (Samplelist)
+
+# for row in Samplelist:
+#     for item in row:
+#         print(item)
+
+for i in range(len(Samplelist)):
+    for j in range(len(Samplelist[i])):
+        print(Samplelist[i][j])
+
+
+print(len(Samplelist))
+
+print( Samplelist[0])
+print(len(Samplelist[0]))
+
+bars= []
+
+for row in Samplelist:
+    bars.append(row[1])
+
+print(bars)
