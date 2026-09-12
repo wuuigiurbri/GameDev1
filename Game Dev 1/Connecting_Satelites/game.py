@@ -27,6 +27,7 @@ def create_satelite():
 
 
 def draw():
+    global total_time
     screen.blit("background",(0,0))
     number= 1
     for i in satelites:
@@ -35,6 +36,11 @@ def draw():
         number += 1
     for i in lines:
         screen.draw.line(i[0],i[1], ("red"))  
+    if next_satelite < number_of_satelites:
+        total_time= time.time() - start_time
+        screen.draw.text(str(round(total_time,1)),(10,10), fontsize= 30,)
+    else:
+        screen.draw.text(str(round(total_time,1)),(10,10), fontsize= 30,)
 
 def update():
     pass
@@ -50,6 +56,7 @@ def on_mouse_down(pos):
         else:
             lines= []
             next_satelite = 0
+
 
 
 create_satelite()
